@@ -1,0 +1,34 @@
+/* Сброс стилей */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/* 'Прибитие' footer'а */
+html,
+body {
+    height: 100%;
+}
+
+footer {
+    position: sticky;
+    top: 100vh;
+}
+
+/* Стили */
+body {
+    background-color: aquamarine;
+}
+
+footer {
+    height: 100px;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
