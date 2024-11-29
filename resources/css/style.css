@@ -1,3 +1,12 @@
+:root {
+    /* font-size: 62.5%; */
+    font-family: monospace;
+    color: antiquewhite;
+
+    /* Переменные */
+    --bg-main: #1d1515;
+}
+
 /* Сброс стилей */
 * {
     margin: 0;
@@ -7,6 +16,15 @@
 
 ul {
     list-style-type: none;
+}
+
+a {
+    color: antiquewhite;
+    text-decoration: none;
+}
+
+a:visited {
+    color: blanchedalmond;
 }
 
 /* 'Прибитие' footer'а */
@@ -20,15 +38,153 @@ footer {
     top: 100vh;
 }
 
+/* A11y */
+.hidden-list {
+    position: absolute;
+    top: -200px;
+    left: -200px;
+}
+
+.hidden-list button {
+    width: 100px;
+    height: 50px;
+    position: absolute;
+}
+
+.hidden-list button:focus {
+    top: 200px;
+    left: 200px;
+    background-color: rgb(24, 24, 27);
+    border: none;
+    border-radius: 4px;
+    color: aqua !important;
+}
+
+nav *:focus {
+    color: red !important;
+}
+
+svg {
+    width: 17px;
+    height: 17px;
+}
+
+nav[role='navigation'] {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 /* Стили */
 body {
-    background-color: aquamarine;
+    background-color: var(--bg-main);
+}
+
+.header__nav {
+    display: flex;
+    align-items: center;
+    padding: 20px 35px;
+    gap: 20px;
+}
+
+.header__nav a {
+    color: aqua;
+    text-decoration: none;
+}
+
+h1 {
+    margin: 0 0 35px 20px;
 }
 
 footer {
     height: 100px;
-    background-color: red;
+    background-color: #0c6b14;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 40px;
+}
+
+.gallery__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery_card {
+    height: 500px;
+    width: 400px;
+    padding: 15px;
+    background-color: brown;
+    border-radius: 6px;
+}
+
+.gallery_card img {
+    width: 100%;
+    height: 60%;
+    border-radius: 4px;
+}
+
+.gallery_card a {
+    color: white;
+    text-decoration: none;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.gallery_card span {
+    color: rgb(182, 182, 182);
+    margin: auto 0 0 auto;
+}
+
+.gallery_card p,
+.gallery_card h3 {
+    margin: 15px 0 0;
+}
+
+.full-view {
+    display: flex;
+    padding: 25px;
+    gap: 35px;
+    justify-content: center;
+}
+
+.full-view img {
+    height: 420px;
+}
+
+.full-view p {
+    text-wrap: balance;
+    line-height: 1.5;
+}
+
+.article__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 45px;
+}
+
+.article__card {
+    padding: 10px 5px;
+}
+
+.article__card a {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 120px;
+    align-items: center;
+    text-wrap: balance;
+}
+
+.article__card span {
+    margin: auto 0 0 auto;
 }
